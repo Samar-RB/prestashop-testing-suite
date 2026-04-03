@@ -7,7 +7,7 @@ The projects cover end-to-end testing, combinatorial test design, combinatorial 
 
 ## Projects
 
-### 1. Web Testing – PrestaShop
+### 1. Web Testing – PrestaShop 
 End-to-end system testing of PrestaShop using combinatorial test design, Cucumber, and Selenium.
 
 ### 2. Sequence Testing – PrestaShop
