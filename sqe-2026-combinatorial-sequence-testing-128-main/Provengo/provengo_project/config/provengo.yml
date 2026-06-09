@@ -1,0 +1,54 @@
+# For full config key list, please visit https://docs.provengo.tech/ProvengoCli/0.9.5/config-reference.html
+version: 2
+
+rest-api.ssl.validation: false
+
+analyze:
+  output:
+    format: pdf   # other options: json, gv
+
+visualization:
+  order: visual    # other options: lexicographic
+  layout: vertical # other options: horizontal, r-horizontal, r-vertical
+
+output:
+  offline: false   # use 'true' when the report is to be viewed offline
+
+sample:
+  overwrite: true  # use 'false' to append samples to sample files rather than deleting existing samples
+
+ensemble:
+  size: 5
+
+selenium:
+  browser: chrome     # other options: firefox, edge, safari
+  implicit-wait: 5000 # milliseconds
+  max-windows: true   # maximize browser windows upon creation.
+
+report:
+  suite:
+    query: :last-5     # other options: :all, :last-X, N,M,O (where N,M,O are run ids)
+
+scenario.generator.metadata: addMetadata  # Name of scenario metadata function.
+
+# ✅ Default run behavior (so it won't stop after 1 step)
+run:
+  random:
+    maxSteps: 80      # <<< תשני ל-50/100/200 לפי מה שאת רוצה
+    # seed: 123       # אופציונלי אם את רוצה ריצות שחוזרות אותו דבר
+
+# Profiles are a quick and efficient way of maintaining multiple configurations
+profiles:
+  verbose-graph:
+    visualization.style: full
+
+  dry-run:
+    run.dry: true
+
+  behavior-graph:
+    props:
+      ANALYZE_GRAPH: true
+
+  # Example for bigger suites (optional)
+  # large-suite:
+  #   size: 100

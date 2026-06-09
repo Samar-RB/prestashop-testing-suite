@@ -1,0 +1,6 @@
+products/
+.DS_Store
+desktop.ini
+products/internal/
+products/run-source/
+*.db
